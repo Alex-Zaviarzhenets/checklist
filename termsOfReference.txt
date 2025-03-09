@@ -1,0 +1,4 @@
+add new tasks, remowe tasks, edit tasks
+nested tasks
+select ALL
+save to local storage
