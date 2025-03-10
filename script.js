@@ -8,6 +8,7 @@ const doneButton = document.getElementById('done');
 const editButtons = document.querySelectorAll('button[id="edit"]');
 const removeButtons = document.querySelectorAll('button[id="remove"]');
 const addButton = document.getElementById('add');
+const selectAllButton = document.getElementById('selectAll');
 
 dialog.onchange = update;
 dialog.onsubmit = showNextModal;
@@ -49,4 +50,11 @@ addButton.addEventListener('click', () => {
     <button id="remove">remove</button>
   `;
   dialog.appendChild(newTaskDiv);
+});
+
+selectAllButton.addEventListener('click', () => {
+  inputs.forEach((input) => {
+    input.checked = true;
+  });
+  update();
 });
