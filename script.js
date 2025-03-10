@@ -7,6 +7,7 @@ const inputs = document.querySelectorAll('input[type="checkbox"]');
 const doneButton = document.getElementById('done');
 const editButtons = document.querySelectorAll('button[id="edit"]');
 const removeButtons = document.querySelectorAll('button[id="remove"]');
+const addButton = document.getElementById('add');
 
 dialog.onchange = update;
 dialog.onsubmit = showNextModal;
@@ -37,4 +38,15 @@ removeButtons.forEach((button) => {
     const taskDiv = e.target.parentElement; 
     taskDiv.remove();
   });
+});
+
+addButton.addEventListener('click', () => {
+  const newTaskDiv = document.createElement('div');
+  newTaskDiv.innerHTML = `
+    <input type="checkbox">
+    <label>new task</label>
+    <button id="edit">edit</button>
+    <button id="remove">remove</button>
+  `;
+  dialog.appendChild(newTaskDiv);
 });
