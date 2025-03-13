@@ -1,4 +1,4 @@
 add new tasks, remowe tasks, edit tasks ---- dont work button "add new task"
 nested tasks ---- in progress
-select ALL
-save to local storage
+select ALL ---- done
+save to local storage ---- in progress
